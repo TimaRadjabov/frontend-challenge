@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Header from "./Pages/Header/Header";
-import Body from "./Pages/Body/Body";
-import LikedCats from "./Pages/LikedCats/LikerCats";
+import { useLocalStorage } from "./components/useLocalStorage/useLocalStorage";
+import Header from "./Pages/Header";
+import Body from "./Pages/Body";
+import LikedCats from "./Pages/LikedCatsPage";
 
 import "./App.css";
 
 export const StoreContext = React.createContext({});
 function App() {
-  const [favorited, setFavorited] = useState([]);
+  const [favorited, setFavorited] = useLocalStorage([], 'favorites');
 
   const addFavoriteCat = (obj) => {
     if (!favorited.find((item) => item.id === obj.id)) {
@@ -22,7 +23,7 @@ function App() {
     setFavorited(prev => prev.filter(item => item.id !== id))
   }
 
-  console.log(favorited);
+
 
   return (
     <div className="App">

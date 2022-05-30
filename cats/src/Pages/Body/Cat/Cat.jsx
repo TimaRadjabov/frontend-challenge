@@ -18,6 +18,7 @@ const Cat = ({ url, id, i, liked }) => {
       id,
     });
   };
+  
 
   const focusOnItem = (id) => {
     itemRefs.current.forEach((item) =>
@@ -32,7 +33,9 @@ const Cat = ({ url, id, i, liked }) => {
   const onClickHeard = (id) => {
     setActive(!active);
     !active ? onAddFavotires() : removeFavoriteCat(id);
+
   };
+  
 
   return (
     <>
