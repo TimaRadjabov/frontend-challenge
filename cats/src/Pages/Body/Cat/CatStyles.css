@@ -1,0 +1,13 @@
+.cats-item_selected {
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.24), 0px 9px 18px rgba(0, 0, 0, 0.18);
+  transform: translateY(-8px);
+}
+
+.heard {
+  width: 40px;
+  height: 37px;
+  position: absolute;
+  top: 165px;
+  right: 20px;
+  cursor: pointer;
+}
