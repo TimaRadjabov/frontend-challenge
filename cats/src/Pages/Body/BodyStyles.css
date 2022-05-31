@@ -2,12 +2,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(5, 230px);
-  gap: 48px;
+  gap: 45px;
   margin: 50px;
 }
 .cats-item {
